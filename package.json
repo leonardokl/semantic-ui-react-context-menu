@@ -1,0 +1,41 @@
+{
+  "name": "semantic-ui-react-context-menu",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "react",
+    "semantic-ui-react",
+    "context-menu"
+  ],
+  "files": [
+    "dist"
+  ],
+  "main": "dist/semantic-ui-react-context-menu.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leonardokl/semantic-ui-react-context-menu.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/leonardokl/semantic-ui-react-context-menu/issues"
+  },
+  "homepage": "https://github.com/leonardokl/semantic-ui-react-context-menu#readme",
+  "devDependencies": {
+    "@babel/plugin-external-helpers": "^7.0.0-beta.44",
+    "babel-core": "^6.26.0",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "prop-types": "^15.6.1",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
+    "rollup": "^0.57.1",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "semantic-ui-react": "^0.68.0"
+  }
+}

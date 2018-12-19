@@ -43,8 +43,11 @@ class ContextMenu extends React.Component {
   };
 
   handleContextMenu = evt => {
+    const { onContextMenu } = this.props;
+
     evt.preventDefault();
     this.mountContent(evt);
+    onContextMenu(evt);
   };
 
   render() {
@@ -59,7 +62,12 @@ class ContextMenu extends React.Component {
 ContextMenu.propTypes = {
   trigger: PropTypes.node.isRequired,
   items: PropTypes.array.isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  onContextMenu: PropTypes.func,
+};
+
+ContextMenu.defaultProps = {
+  onContextMenu: () => {},
 };
 
 export default ContextMenu;

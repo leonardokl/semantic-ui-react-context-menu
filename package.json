@@ -12,7 +12,9 @@
   ],
   "main": "dist/semantic-ui-react-context-menu.js",
   "scripts": {
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags && npm publish"
   },
   "repository": {
     "type": "git",

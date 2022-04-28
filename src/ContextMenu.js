@@ -43,18 +43,25 @@ class ContextMenu extends React.Component {
   };
 
   handleContextMenu = evt => {
-    const { onContextMenu } = this.props;
+	if (!evt.ctrlKey) {
+		this.unmountContent();
+	  const { onContextMenu } = this.props;
+		evt.stopPropagation();
+	  evt.preventDefault();
+	  this.mountContent(evt);
+	  onContextMenu(evt);
+	}
+  };
 
-    evt.preventDefault();
-    this.mountContent(evt);
-    onContextMenu(evt);
+   handleOnClick = evt => {
+		this.unmountContent();
   };
 
   render() {
     const { trigger } = this.props;
 
     return cloneElement(trigger, {
-      onContextMenu: this.handleContextMenu
+      onContextMenu: this.handleContextMenu, onClick: this.handleOnClick
     });
   }
 }

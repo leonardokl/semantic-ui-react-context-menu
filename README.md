@@ -25,3 +25,9 @@ const MyComponent = () => (
 ```
 
 > The trigger must expose onContextMenu prop
+
+## Rules
+    A ContextMenu set in a child element to popup instead an eventual ContextMenu set in parent.
+    the ContextMenu position is updataed at each right click.
+    The ContextMenu is removed when a click is done out of this ContextMenu.
+    the ContextMenu is not triggered when "ctrl" is hold
